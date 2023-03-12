@@ -16,7 +16,7 @@ return [
 
     'title' => 'AdminLTE 3',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '- OdontoShield',
 
     /*
     |--------------------------------------------------------------------------
@@ -253,13 +253,13 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'cadastro',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false,
+    'profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -297,9 +297,14 @@ return [
             'topnav_right' => true,
         ],
         [
-            'type'         => 'fullscreen-widget',
+            'text' => 'Sair',
+            'url'  => '/sair',
+            'icon' => 'fas fa-fw fa-circle',
             'topnav_right' => true,
         ],
+
+     
+      
 
         // Sidebar items:
         [
@@ -329,6 +334,8 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+     
+        
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -382,6 +389,11 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
+        ],
+          [
+            'type'         => 'fa-regular fa-arrow-right-from-bracket',
+            'topnav_right' => true,
+            'text'         => 'Sair'
         ],
     ],
 

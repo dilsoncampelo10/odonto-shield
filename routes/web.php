@@ -6,7 +6,10 @@ use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [HomeController::class, 'index'])->middleware('auth');
+Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/cadastro', [RegisterController::class, 'index'])->name('register');
+Route::post('/cadastro', [RegisterController::class, 'register']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/sair', [LoginController::class, 'logout'])->name('logout');
