@@ -1,0 +1,6 @@
+Mini-mundo
+
+Um funcionário deve ter o cpf, nome, senha e data de nascimento. Ele é responsável por cadastrar um paciente e abrir uma consulta para o mesmo.
+O paciente deve ter o cpf, e-mail, nome, senha, um ou mais telefone e seu endereço. Ele será capaz de solicitar uma consulta, poderá acompanhar o status da consulta e solicitar cancelamento ou adiamento.
+A consulta dever ter data, hora, o paciente e o dentista que o atenderá. 
+O dentista por sua vez, tem, cro, nome, senha, data de nascimento, e-mail, telefone e será cadastrado pelo admin do sistema apenas para visualização de profissionais pelos pacientes.
