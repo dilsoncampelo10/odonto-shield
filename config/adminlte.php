@@ -254,7 +254,7 @@ return [
 
     'use_route_url' => false,
     'dashboard_url' => '/',
-    'logout_url' => 'logout',
+    'logout_url' => '/sair',
     'login_url' => 'login',
     'register_url' => 'cadastro',
     'password_reset_url' => 'password/reset',
@@ -303,26 +303,53 @@ return [
             'topnav_right' => true,
         ],
 
-     
-      
+
+
 
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'pesquisar',
         ],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        ['header' => 'Gerenciamento'],
         [
-            'text'        => 'pages',
+            'text'        => 'Cadastrar paciente',
+            'url'         => 'paciente/create',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 4,
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Cadastrar dentista',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
         ],
+        [
+            'text'    => 'Consultas',
+            'icon'    => 'far fa-fw fa-file',
+            'submenu' => [
+                [
+                    'text' => 'Marcar consulta',
+                    'url'  => '#',
+                ],
+                [
+                    'text'    => 'Remarcar consulta',
+                    'url'     => '#',
+                ],
+                [
+                    'text' => 'Cancelar consulta',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
@@ -334,8 +361,8 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-     
-        
+
+
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -390,7 +417,7 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
-          [
+        [
             'type'         => 'fa-regular fa-arrow-right-from-bracket',
             'topnav_right' => true,
             'text'         => 'Sair'
