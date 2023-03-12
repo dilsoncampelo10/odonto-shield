@@ -296,12 +296,7 @@ return [
             'text'         => 'search',
             'topnav_right' => true,
         ],
-        [
-            'text' => 'Sair',
-            'url'  => '/sair',
-            'icon' => 'fas fa-fw fa-circle',
-            'topnav_right' => true,
-        ],
+
 
 
 
@@ -318,11 +313,19 @@ return [
         ],
         ['header' => 'Gerenciamento'],
         [
-            'text'        => 'Cadastrar paciente',
-            'url'         => 'paciente/create',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'    => 'Pacientes',
+            'icon'    => 'far fa-fw fa-file',
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar paciente',
+                    'url'  => 'patients/create',
+                ],
+                [
+                    'text'    => 'Listar pacientes',
+                    'url'     => 'patients',
+                ],
+
+            ],
         ],
         [
             'text'        => 'Cadastrar dentista',
@@ -360,6 +363,12 @@ return [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Sair',
+            'url'  => '/sair',
+            'icon' => 'fa fa-fw fa-power-off text-red',
+
         ],
 
 

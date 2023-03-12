@@ -15,4 +15,4 @@ Route::post('/cadastro', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::any('/sair', [LoginController::class, 'logout'])->name('logout');
 
-Route::resource('paciente', UserController::class);
+Route::resource('patients', UserController::class);

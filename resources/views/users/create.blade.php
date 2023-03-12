@@ -29,7 +29,7 @@
         <div class="card-header">
             <h3 class="card-title">Cadastre seu paciente</h3>
         </div>
-        <form action="{{route('paciente.store')}}" method="POST" class="form-horizontal" >
+        <form action="{{route('patients.store')}}" method="POST" class="form-horizontal" >
             @csrf
             <div class="card-body">
                 <div class="form-group row">
