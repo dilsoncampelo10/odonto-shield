@@ -3,7 +3,7 @@
 @section('title','Painel')
 
 @section('content_header')
-<h1>Odonto Shield</h1>
+<h1 class="mt-3 mb-3 text-bold">Dashboard</h1>
 @endsection
 
 @section('content')

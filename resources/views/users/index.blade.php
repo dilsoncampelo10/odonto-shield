@@ -3,7 +3,7 @@
 @section('title','Painel')
 
 @section('content_header')
-<h1>Odonto Shield</h1>
+<h1 class="mt-3 mb-3 text-bold">Pacientes</h1>
 @endsection
 
 @section('content')
@@ -26,7 +26,7 @@
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->phone}}</td>
-                <td>{{$user->birthdate}}</td>
+                <td>{{$user->birthdate ? date('d/m/Y',strtotime($user->birthdate)) : ''}}</td>
                 <td>
                     <a href="" class="btn btn-info">Editar</a>
                     <form action="" method="post" class="d-inline-block" onsubmit="return confirm('Tem certeza que deseja excluir?')">

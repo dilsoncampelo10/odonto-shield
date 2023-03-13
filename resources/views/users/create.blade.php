@@ -3,8 +3,7 @@
 @section('title','Painel')
 
 @section('content_header')
-<h1>Odonto Shield</h1>
-<h2 class="mt-3 mb-3 text-bold">+ Cadastro de pacientes</h2>
+<h1 class="mt-3 mb-3 text-bold">+ Cadastro de pacientes</h1>
 <hr>
 @endsection
 
@@ -37,7 +36,7 @@
                         Nome
                     </label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" placeholder="Digite nome do paciente" name="name" value="{{old('name')}}">
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Digite nome do paciente" name="name" value="{{old('name')}}">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -45,7 +44,7 @@
                         E-mail
                     </label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Digite e-mail do paciente" name="email">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Digite e-mail do paciente" name="email">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -53,7 +52,7 @@
                         CPF
                     </label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="cpf" placeholder="Digite CPF do paciente" name="cpf">
+                        <input type="text" class="form-control @error('cpf') is-invalid @enderror" id="cpf" placeholder="Digite CPF do paciente" name="cpf">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -61,7 +60,7 @@
                         Data de nascimento
                     </label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" id="birthdate" name="birthdate">
+                        <input type="date" class="form-control @error('birthdate') is-invalid @enderror" id="birthdate" name="birthdate">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -69,7 +68,7 @@
                         Telefone
                     </label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Informe o telefone do paciente">
+                        <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="Informe o telefone do paciente">
                     </div>
                 </div>
                 

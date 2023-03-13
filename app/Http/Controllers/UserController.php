@@ -42,7 +42,7 @@ class UserController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->route('paciente.create')
+            return redirect()->route('patients.create')
                 ->withErrors($validator)
                 ->withInput();
         }
@@ -52,7 +52,7 @@ class UserController extends Controller
 
         User::create($data);
 
-        return redirect()->route('paciente.create');
+        return redirect()->route('patients.create');
     }
 
     /**
