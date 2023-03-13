@@ -13,6 +13,6 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/cadastro', [RegisterController::class, 'index'])->name('register');
 Route::post('/cadastro', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::any('/sair', [LoginController::class, 'logout'])->name('logout');
+Route::match(['get', 'post'] , '/sair', [LoginController::class, 'logout'])->name('logout');
 
 Route::resource('patients', UserController::class);
